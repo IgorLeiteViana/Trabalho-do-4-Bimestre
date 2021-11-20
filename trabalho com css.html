@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loja de frutas</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" type="text/css" href="LojaFruta.css">
+</head>
+</head>
+<body>
+  <div class="container">
+  <div class="box">
+  <center class="Título"><b>Loja de frutas Vigor</b></center>
+  <div id="app-calc">
+<center><img src="logo-frutas-png-3.png" width="70" height="70"></center>
+    <br><br><form>
+    <table style="width: 100%"><center>
+  <tr><td class="td">
+
+  <b><tr>
+  <td class="td"><center><b>Limão(Kg): R$ 2,50 - <button v-on:click="addLimaoFunction">Limão</button></b></center></td>
+
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+    <td class="td"><center><b>Maçã(Kg): R$ 4,75 - <button v-on:click="addMacaFunction">Maçã</button></b></center></td>
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="td"><center><b>Banana(kg): R$ 2,00 - <button v-on:click="addBananaFunction">Banana</button></b></center></td>
+  </tr>
+    <tr>
+    <td></td>
+  </tr>  <tr>
+    <td></td>
+  </tr>
+
+
+  <tr>
+    <td class="td"><center><b>Pera(Kg) R$ 6,60 - <button v-on:click="addPeraFunction">Pera</button></b></center></td>
+
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="td"><center><b>Morango(Kg) R$ 5,50 - <button v-on:click="addMorangoFunction">Morango</button></center></td>
+
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="td"><center><b>Uva(Kg): R$ 8,00 - <button v-on:click="addUvaFunction">Uva</button></b></center></td>
+
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+  </tr>
+</center>
+</table>
+     <center><p>Result: {{ result }}</p></center>
+</form>
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+    
+  </div>
+
+  <script>
+    var app7 = new Vue({
+        el: '#app-calc',
+        data: {
+            n1: 10,
+            n2: 2,
+            result:0
+        },
+        methods: {
+          sumFunction: function () {
+              this.result = this.n1 + this.n2;
+          },
+          addLimaoFunction: function () {
+              this.result = this.result + 2.50;
+          },
+          addMacaFunction: function () {
+              this.result = this.result + 4.75;
+          },
+          addBananaFunction: function () {
+              this.result = this.result + 2.00;
+          },
+          addPeraFunction: function () {
+              this.result = this.result + 6.60;
+          },
+          addMorangoFunction: function () {
+              this.result = this.result + 5.50;
+          },
+          addUvaFunction: function () {
+              this.result = this.result + 8.00;
+          }
+
+       }
+    })
+  </script>
+</body>
+</html>

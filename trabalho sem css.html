@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loja de frutas</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  
+  <div id="app-calc">
+
+
+
+    <p>Produtos</p>
+    Limão(Kg): R$ 2,50 - <button v-on:click="addLimaoFunction">Limão</button><br>
+    Maçã(Kg): R$ 4,75 - <button v-on:click="addMacaFunction">Maçã</button><br>
+    Banana(kg): R$ 2,00 - <button v-on:click="addBananaFunction">Banana</button><br>
+    Pera(Kg) R$ 6,60 - <button v-on:click="addPeraFunction">Pera</button><br>
+    Morango(Kg) R$ 5,50 - <button v-on:click="addMorangoFunction">Morango</button><br>
+    Uva(Kg): R$ 8,00 - <button v-on:click="addUvaFunction">Uva</button><br>
+
+    <p>Result: {{ result }}</p>
+
+
+    
+  </div>
+
+  <script>
+    var app7 = new Vue({
+        el: '#app-calc',
+        data: {
+            n1: 10,
+            n2: 2,
+            result:0
+        },
+        methods: {
+          sumFunction: function () {
+              this.result = this.n1 + this.n2;
+          },
+          addLimaoFunction: function () {
+              this.result = this.result + 2.50;
+          },
+          addMacaFunction: function () {
+              this.result = this.result + 4.75;
+          },
+          addBananaFunction: function () {
+              this.result = this.result + 2.00;
+          },
+          addPeraFunction: function () {
+              this.result = this.result + 6.60;
+          },
+          addMorangoFunction: function () {
+              this.result = this.result + 5.50;
+          },
+          addUvaFunction: function () {
+              this.result = this.result + 8.00;
+          }
+
+       }
+    })
+  </script>
+</body>
+</html>
